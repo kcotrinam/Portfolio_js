@@ -121,3 +121,45 @@ q:after {
 table {
   border-collapse: collapse;
   border-spacing: 0; }
+
+a {
+  text-decoration: none; }
+
+.navbar {
+  display: flex;
+  justify-content: flex-end;
+  padding: 0.5rem;
+  background: steelblue;
+  position: relative; }
+  .navbar__list {
+    position: absolute;
+    top: 0;
+    right: 0;
+    right: -100%;
+    background: black;
+    font-size: 1.5rem;
+    padding: 2.5rem 2.5rem 1.5rem 1.5rem; }
+  .navbar__list * + * {
+    margin-top: 1.2rem; }
+  .navbar__list-item a {
+    color: #fff; }
+
+.show-menu {
+  right: 0; }
+
+.burger-button {
+  width: 25px;
+  position: relative;
+  padding: 0.5rem;
+  cursor: pointer; }
+  .burger-button span {
+    display: block;
+    margin-top: 0.2rem;
+    border-top: 3px solid white;
+    transition: transform 0.5s; }
+  .burger-button .rotate-first {
+    transform: rotateZ(45deg) translateX(10px); }
+  .burger-button .hide {
+    transform: translateX(100vw); }
+  .burger-button .rotate-second {
+    transform: rotateZ(-45deg) translate(9px); }

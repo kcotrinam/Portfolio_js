@@ -1,0 +1,25 @@
+.burger-button {
+  width: 25px;
+  position: relative;
+  padding: 0.5rem;
+  cursor: pointer;
+
+  & span {
+    display: block;
+    margin-top: 0.2rem;
+    border-top: 3px solid white;
+    transition: transform 0.5s;
+  }
+
+  & .rotate-first {
+    transform: rotateZ(45deg) translateX(10px);
+  }
+
+  & .hide {
+    transform: translateX(100vw);
+  }
+
+  & .rotate-second {
+    transform: rotateZ(-45deg) translate(9px);
+  }
+}

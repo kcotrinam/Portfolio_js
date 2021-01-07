@@ -1,0 +1,29 @@
+.navbar {
+  display: flex;
+  justify-content: flex-end;
+  padding: 0.5rem;
+  background: steelblue;
+  position: relative;
+
+  &__list {
+    position: absolute;
+    top: 0;
+    right: 0;
+    right: -100%;
+    background: black;
+    font-size: 1.5rem;
+    padding: 2.5rem 2.5rem 1.5rem 1.5rem;
+  }
+
+  &__list * + * {
+    margin-top: 1.2rem;
+  }
+
+  &__list-item a {
+    color: #fff;
+  }
+}
+
+.show-menu {
+  right: 0;
+}
