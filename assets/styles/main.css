@@ -125,6 +125,9 @@ table {
 a {
   text-decoration: none; }
 
+:root {
+  --navbar-columns: 3; }
+
 .navbar__list {
   grid-column: 2; }
 
@@ -164,8 +167,9 @@ body {
     .navbar__list {
       position: initial;
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      padding: 0; }
+      grid-template-columns: repeat(var(--navbar-columns), 1fr);
+      padding: 0;
+      width: auto; }
     .navbar__list-item {
       margin: 0; }
     .navbar__list-item a {

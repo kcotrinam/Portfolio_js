@@ -18,3 +18,12 @@ burgerBtn.addEventListener('click', () => {
     menu.classList.toggle('show-menu')
   })
 })
+
+//NAVBAR
+
+const setNavbarColumns = () => {
+  const menuItems = [...document.querySelectorAll('#navbar-list li')]
+  document.documentElement.style.setProperty('--navbar-columns', menuItems.length)
+}
+
+setNavbarColumns()

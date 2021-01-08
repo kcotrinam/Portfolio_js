@@ -46,8 +46,9 @@ body {
     &__list {
       position: initial;
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(var(--navbar-columns), 1fr);
       padding: 0;
+      width: auto;
     }
 
     &__list-item {
