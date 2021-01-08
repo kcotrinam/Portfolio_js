@@ -125,24 +125,34 @@ table {
 a {
   text-decoration: none; }
 
+body {
+  position: relative;
+  overflow: hidden; }
+
 .navbar {
+  width: 100%;
   display: flex;
   justify-content: flex-end;
   padding: 0.5rem;
-  background: steelblue;
-  position: relative; }
+  background: steelblue; }
   .navbar__list {
+    width: 30vw;
     position: absolute;
     top: 0;
-    right: 0;
     right: -100%;
     background: black;
-    font-size: 1.5rem;
-    padding: 2.5rem 2.5rem 1.5rem 1.5rem; }
+    font-size: 1.2rem;
+    padding: 3rem 0;
+    transition: right 0.3s linear; }
   .navbar__list * + * {
-    margin-top: 1.2rem; }
+    margin-top: 0.5rem; }
+  .navbar__list-item:hover {
+    background: blue; }
   .navbar__list-item a {
-    color: #fff; }
+    display: block;
+    width: 100%;
+    color: #fff;
+    padding: 0.5rem 0.8rem; }
 
 .show-menu {
   right: 0; }
@@ -151,6 +161,7 @@ a {
   width: 25px;
   position: relative;
   padding: 0.5rem;
+  padding-right: 8%;
   cursor: pointer; }
   .burger-button span {
     display: block;
