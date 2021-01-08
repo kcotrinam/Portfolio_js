@@ -125,8 +125,10 @@ table {
 a {
   text-decoration: none; }
 
-.navbar__list {
-  grid-column: 2; }
+@media screen and (min-width: 576px) {
+  body {
+    height: 100vh;
+    background-color: blue; } }
 
 body {
   position: relative;
@@ -137,7 +139,7 @@ body {
   display: flex;
   justify-content: flex-end;
   padding: 0.5rem;
-  background: black; }
+  background: steelblue; }
   .navbar__list {
     width: 30vw;
     position: absolute;
@@ -150,28 +152,12 @@ body {
   .navbar__list * + * {
     margin-top: 0.5rem; }
   .navbar__list-item:hover {
-    background: #1a1a1a; }
+    background: blue; }
   .navbar__list-item a {
     display: block;
     width: 100%;
     color: #fff;
     padding: 0.5rem 0.8rem; }
-  @media screen and (min-width: 768px) {
-    .navbar {
-      display: grid;
-      grid-template-columns: 1fr auto 1fr;
-      padding: 0; }
-    .navbar__list {
-      position: initial;
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      padding: 0; }
-    .navbar__list-item {
-      margin: 0; }
-    .navbar__list-item a {
-      padding: 0.85rem;
-      text-align: center;
-      width: auto; } }
 
 .show-menu {
   right: 0; }
@@ -193,6 +179,3 @@ body {
     transform: translateX(100vw); }
   .burger-button .rotate-second {
     transform: rotateZ(-45deg) translate(9px); }
-  @media screen and (min-width: 768px) {
-    .burger-button {
-      display: none; } }

@@ -23,4 +23,8 @@
   & .rotate-second {
     transform: rotateZ(-45deg) translate(9px);
   }
+
+  @include from(md) {
+    display: none;
+  }
 }

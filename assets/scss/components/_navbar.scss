@@ -8,14 +8,14 @@ body {
   display: flex;
   justify-content: flex-end;
   padding: 0.5rem;
-  background: steelblue;
+  background: black;
 
   &__list {
     width: 30vw;
     position: absolute;
     top: 0;
     right: -100%;
-    background: black;
+    background: hsl(0, 0, 0);
     font-size: 1.2rem;
     padding: 3rem 0;
     transition: right 0.3s linear;
@@ -26,7 +26,7 @@ body {
   }
 
   &__list-item:hover {
-    background: blue;
+    background: lighten(black, 10);
   }
 
   &__list-item a {
@@ -34,6 +34,31 @@ body {
     width: 100%;
     color: #fff;
     padding: 0.5rem 0.8rem;
+  }
+
+  @include from(md) {
+    & {
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      padding: 0;
+    }
+
+    &__list {
+      position: initial;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      padding: 0;
+    }
+
+    &__list-item {
+      margin: 0;
+    }
+
+    &__list-item a {
+      padding: 0.85rem;
+      text-align: center;
+      width: auto;
+    }
   }
 }
 
