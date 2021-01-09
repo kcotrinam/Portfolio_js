@@ -236,3 +236,36 @@ body {
     .header {
       max-width: 40vw;
       margin: auto; } }
+
+.social {
+  padding: 0.75rem;
+  font-size: 1.5rem; }
+  .social__title {
+    color: #db4747;
+    padding-bottom: 2rem;
+    font-weight: 300; }
+  .social__list {
+    width: 25%;
+    display: flex;
+    justify-content: space-around;
+    padding-top: 2rem;
+    border-top: 2px solid white;
+    font-size: 1.75rem; }
+  .social__list-item:hover {
+    transition: transform 0.5s;
+    transform: rotateY(360deg); }
+  @media screen and (min-width: 768px) {
+    .social__title {
+      display: none; }
+    .social__list {
+      position: absolute;
+      right: -63px;
+      top: 35vh;
+      transform: rotateZ(90deg);
+      padding-top: 0;
+      border: none;
+      max-width: 250px;
+      font-size: 2rem; }
+    .social__list-item:hover {
+      transition: transform 0.5s;
+      transform: rotateZ(-90deg); } }

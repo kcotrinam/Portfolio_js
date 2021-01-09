@@ -44,4 +44,4 @@ const displayLetterByLetter = (destination, destination2, message, speed ) => {
   }, speed)
 }
 
-displayLetterByLetter('firstname', 'lastname' ,'Kevin Cotrina', 500)
+displayLetterByLetter('firstname', 'lastname' ,'Kevin Cotrina', 300)
