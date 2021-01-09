@@ -149,8 +149,7 @@ body {
   grid-column: 2; }
 
 body {
-  position: relative;
-  overflow: hidden; }
+  position: relative; }
 
 .navbar {
   width: 100%;
