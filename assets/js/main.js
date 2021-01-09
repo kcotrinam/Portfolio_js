@@ -27,3 +27,21 @@ const setNavbarColumns = () => {
 }
 
 setNavbarColumns()
+
+const displayLetterByLetter = (destination, destination2, message, speed ) => {
+  let i = 0;
+  let interval = setInterval(() => {
+    if (i < 6) {
+      document.getElementById(destination).innerHTML += message.charAt(i);
+      i++;
+    } else {
+      document.getElementById(destination2).innerHTML += message.charAt(i);
+      i++;
+    }
+    if(i > message.length) {
+      clearInterval(interval);
+    }
+  }, speed)
+}
+
+displayLetterByLetter('firstname', 'lastname' ,'Kevin Cotrina', 500)
