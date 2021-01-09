@@ -1,4 +1,18 @@
+.article-container {
+  margin-top: 7.5rem;
+  & > p {
+    font-weight: 200;
+  }
+
+  &__title {
+    font-family: "Playfair Display", serif;
+    font-size: 6rem;
+    font-weight: 200;
+  }
+}
+
 .article {
+  margin-top: 2.5rem;
   padding: 0.5rem;
   background: url(../img/mockup.jpg);
   background-position: center;
@@ -15,7 +29,7 @@
     background: linear-gradient(
       180deg,
       #000000 0%,
-      rgba(0, 0, 0, 0) 48.44%,
+      rgba(0, 0, 0, 0.2) 48.44%,
       #000000 100%
     );
   }
@@ -27,6 +41,7 @@
   &__name {
     font-size: var(--title-size);
     font-weight: 300;
+    margin-bottom: 1.5rem;
   }
 
   &__list {
@@ -40,6 +55,7 @@
     padding: 0.85rem;
     background: hsla(0, 0, 20, 0.7);
     border-radius: 0.25rem;
+    font-weight: 200;
   }
 
   &__button {

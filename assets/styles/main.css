@@ -149,7 +149,8 @@ body {
   grid-column: 2; }
 
 body {
-  position: relative; }
+  position: relative;
+  overflow-x: hidden; }
 
 .navbar {
   width: 100%;
@@ -277,7 +278,17 @@ body {
       transition: transform 0.5s;
       transform: rotateZ(-90deg); } }
 
+.article-container {
+  margin-top: 7.5rem; }
+  .article-container > p {
+    font-weight: 200; }
+  .article-container__title {
+    font-family: "Playfair Display", serif;
+    font-size: 6rem;
+    font-weight: 200; }
+
 .article {
+  margin-top: 2.5rem;
   padding: 0.5rem;
   background: url(../img/mockup.jpg);
   background-position: center;
@@ -290,12 +301,13 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0) 48.44%, #000000 100%); }
+    background: linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0.2) 48.44%, #000000 100%); }
   .article > * {
     position: relative; }
   .article__name {
     font-size: var(--title-size);
-    font-weight: 300; }
+    font-weight: 300;
+    margin-bottom: 1.5rem; }
   .article__list {
     display: flex;
     justify-content: space-around;
@@ -304,7 +316,8 @@ body {
   .article__list-item {
     padding: 0.85rem;
     background: rgba(51, 51, 51, 0.7);
-    border-radius: 0.25rem; }
+    border-radius: 0.25rem;
+    font-weight: 200; }
   .article__button {
     background-color: var(--button-bg-color);
     margin-top: 7.5rem;
