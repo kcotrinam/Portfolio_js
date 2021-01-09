@@ -1,5 +1,7 @@
 :root {
   --navbar-columns: 3;
+  --button-bg-color: #db4747;
+  --title-size: 1.5rem;
 }
 
 $break-points: (
@@ -9,3 +11,5 @@ $break-points: (
   "xl": 1200px,
   "xxl": 1400px,
 );
+
+$button-bg-color: #db4747;
