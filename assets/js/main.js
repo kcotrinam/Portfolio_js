@@ -1,6 +1,7 @@
 const burgerBtn = document.querySelector('#burger-btn');
 const dashList = [...document.querySelectorAll('#burger-btn span')]
 const menu = document.querySelector('#navbar-list')
+const template = document.querySelector('.article-template').content
 
 burgerBtn.addEventListener('click', () => {
   dashList.map((el,idx) => {
@@ -46,9 +47,26 @@ const displayLetterByLetter = (destination, destination2, message, speed ) => {
 
 displayLetterByLetter('firstname', 'lastname' ,'Kevin Cotrina', 150)
 
-// const articleNode = document.querySelector('.article')
-// const newNode = document.importNode(articleNode, true);
-// const articleContainer = document.querySelector('.article-container')
-// articleContainer.appendChild(newNode)
-// console.log(articleContainer)
 
+const fillArticleTemplate = (title, lg, img) => {
+  const copyTemplate = document.importNode(template, true)
+  const articlesContainer = document.querySelector('.article-container')
+  const languages = [...copyTemplate.querySelectorAll('.article__list-item')]
+  const templateInfo = copyTemplate.querySelector('.article__info')
+  const templateImage = [...copyTemplate.querySelectorAll('.article__img')]
+  
+  templateImage.map(el => {
+    el.style.background = `url(assets/img/${img}.jpg) center/cover`;
+  })
+
+  templateInfo.style.background = `url(assets/img/${img}.jpg) center/cover`;
+
+  copyTemplate.querySelector('.article__name').textContent = title
+  languages.map( (el, idx)  => {
+    el.textContent = lg[idx]
+  });
+  articlesContainer.appendChild(copyTemplate)
+}
+
+fillArticleTemplate("article1", ["js", "css", "ruby"], 'mockup')
+// fillArticleTemplate("article2", ["nodeJs", "Java", "RoR"], 'mockup')

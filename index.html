@@ -46,17 +46,21 @@
     <section class="article-container">
       <p>My recent works</p>
       <h2 class="article-container__title">Portfolio</h2>
-      <article class="article">
-        <h3 class="article__name">Project name goes here</h3>
-        <div class="article__info">
-          <ul class="article__list">
-            <li class="article__list-item">HTML/CSS</li>
-            <li class="article__list-item">Ruby on Rails</li>
-            <li class="article__list-item">Javascript</li>
-          </ul>
-          <div class="article__button">See this project<span><i class="fas fa-arrow-right"></i></span></div>
-        </div>
-      </article>
+      <template class="article-template">
+        <article class="article">
+          <div class="article__img"></div>
+          <div class="article__img"></div>
+          <div class="article__info">
+            <h3 class="article__name">Project name goes here</h3>
+            <ul class="article__list">
+              <li class="article__list-item">HTML/CSS</li>
+              <li class="article__list-item">Ruby on Rails</li>
+              <li class="article__list-item">Javascript</li>
+            </ul>
+            <div class="article__button">See this project<span><i class="fas fa-arrow-right"></i></span></div>
+          </div>
+        </article>
+      </template>
     </section>
   
     <script src="assets/js/main.js"></script>

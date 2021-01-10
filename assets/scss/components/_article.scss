@@ -15,9 +15,9 @@
 
 .article {
   margin-top: 2.5rem;
+
   &__info {
     padding: 0.5rem;
-    background: url(../img/mockup.jpg);
     background-position: center;
     background-size: cover;
     position: relative;
@@ -53,6 +53,13 @@
     justify-content: space-around;
     font-weight: 100;
     margin-top: 0.5rem;
+
+    @include from(md) {
+      & {
+        width: 40%;
+        margin: 0.5rem auto;
+      }
+    }
   }
 
   &__list-item {
@@ -74,6 +81,11 @@
 
     & span {
       margin-left: 1rem;
+    }
+    @include from(md) {
+      & {
+        margin-top: 25vw;
+      }
     }
   }
 }

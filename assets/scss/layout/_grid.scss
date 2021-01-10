@@ -4,12 +4,17 @@
   }
 }
 
-// .article-container {
-//   display: grid;
-//   grid-template-columns: auto auto repeat(var(--article-columns), 1fr);
-// }
-
 .article {
   display: grid;
   grid-template-rows: auto 1fr;
+
+  @include from(md) {
+    grid-template-columns: 1fr 1.5fr;
+    grid-template-rows: repeat(2, 1fr);
+
+    &__info {
+      grid-column: 2;
+      grid-row: 1/3;
+    }
+  }
 }
