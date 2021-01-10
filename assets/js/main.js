@@ -45,3 +45,10 @@ const displayLetterByLetter = (destination, destination2, message, speed ) => {
 }
 
 displayLetterByLetter('firstname', 'lastname' ,'Kevin Cotrina', 150)
+
+// const articleNode = document.querySelector('.article')
+// const newNode = document.importNode(articleNode, true);
+// const articleContainer = document.querySelector('.article-container')
+// articleContainer.appendChild(newNode)
+// console.log(articleContainer)
+

@@ -1,5 +1,7 @@
 .article-container {
   margin-top: 7.5rem;
+  padding: 0.5rem;
+
   & > p {
     font-weight: 200;
   }
@@ -13,13 +15,15 @@
 
 .article {
   margin-top: 2.5rem;
-  padding: 0.5rem;
-  background: url(../img/mockup.jpg);
-  background-position: center;
-  background-size: cover;
-  position: relative;
+  &__info {
+    padding: 0.5rem;
+    background: url(../img/mockup.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+  }
 
-  &::before {
+  &__info::before {
     content: "";
     position: absolute;
     top: 0;
@@ -34,17 +38,17 @@
     );
   }
 
-  & > * {
+  &__info > * {
     position: relative;
   }
 
   &__name {
     font-size: var(--title-size);
     font-weight: 300;
-    margin-bottom: 1.5rem;
   }
 
   &__list {
+    padding-top: 2rem;
     display: flex;
     justify-content: space-around;
     font-weight: 100;
@@ -61,7 +65,7 @@
   &__button {
     @extend %button;
     background-color: var(--button-bg-color);
-    margin-top: 7.5rem;
+    margin-top: 9.5rem;
     cursor: pointer;
 
     &:hover {
