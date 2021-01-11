@@ -140,14 +140,19 @@ body {
   --button-bg-color: #db4747;
   --card-bg-color: #212123; }
 
-.header__title, .article-container__title, .about__title {
-  font-size: 6rem;
+.header__title, .article-container__title, .about__title, .started__title {
+  font-size: 5rem;
   font-family: "Playfair Display", serif;
   font-weight: 100; }
 
 .card__title {
   font-size: 1.5rem;
   font-weight: 300; }
+
+.started__description {
+  font-size: clamp(1rem, 2.5vw, 1.1rem);
+  line-height: 1.6;
+  padding: 2rem 0; }
 
 .article__button {
   display: inline-block;
@@ -400,7 +405,10 @@ body {
     .about {
       padding-right: 6rem; } }
   .about__title {
-    font-size: clamp(2.5rem, 8vw, 6rem); }
+    font-size: 5.5rem; }
+    @media screen and (min-width: 768px) {
+      .about__title {
+        font-size: clamp(2.5rem, 8vw, 6rem); } }
   .about__description {
     font-size: clamp(1rem, 2.5vw, 1.1rem);
     line-height: 1.6;
@@ -454,3 +462,8 @@ body {
     background-color: rgba(241, 157, 40, 0.5); }
   .card .heart {
     background-color: rgba(219, 72, 72, 0.5); }
+
+.started {
+  padding: 0.5rem; }
+  .started__upper {
+    font-weight: 300; }

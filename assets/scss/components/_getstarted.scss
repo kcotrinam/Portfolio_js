@@ -1,0 +1,15 @@
+.started {
+  padding: 0.5rem;
+
+  &__upper {
+    font-weight: 300;
+  }
+
+  &__title {
+    @extend %title;
+  }
+
+  &__description {
+    @extend %description;
+  }
+}
