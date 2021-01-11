@@ -7,9 +7,7 @@
   }
 
   &__title {
-    font-size: 6rem;
-    font-weight: 100;
-    font-family: "Playfair Display", serif;
+    @extend %title;
     font-style: italic;
 
     & span {

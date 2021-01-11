@@ -1,0 +1,11 @@
+.skills-container {
+  padding: 5rem;
+}
+
+.languages {
+  background-color: var(--card-bg-color);
+
+  &__title {
+    @extend %card-title;
+  }
+}

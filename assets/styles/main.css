@@ -136,14 +136,31 @@ body {
 
 :root {
   --navbar-columns: 3;
+  --title-size: 1.5rem;
   --button-bg-color: #db4747;
-  --title-size: 1.5rem; }
+  --card-bg-color: #212123; }
+
+.header__title, .article-container__title, .about__title {
+  font-size: 6rem;
+  font-family: "Playfair Display", serif;
+  font-weight: 100; }
+
+.languages__title {
+  font-size: 1.5rem;
+  font-weight: 300; }
 
 .article__button {
   display: inline-block;
   padding: 0.9rem;
   font-weight: 300;
   border-radius: 0.5rem; }
+
+.about__button {
+  padding: 1.2rem 0.5rem;
+  font-weight: bold;
+  border-radius: 0.5rem;
+  text-align: center;
+  cursor: pointer; }
 
 .navbar__list {
   grid-column: 2; }
@@ -237,9 +254,6 @@ body {
   .header * + * {
     margin-top: 0.75rem; }
   .header__title {
-    font-size: 6rem;
-    font-weight: 100;
-    font-family: "Playfair Display", serif;
     font-style: italic; }
     .header__title span {
       display: block;
@@ -297,8 +311,6 @@ body {
   .article-container > p {
     font-weight: 200; }
   .article-container__title {
-    font-family: "Playfair Display", serif;
-    font-size: 6rem;
     font-weight: 200; }
 
 .article {
@@ -347,3 +359,27 @@ body {
     @media screen and (min-width: 768px) {
       .article__button {
         margin-top: 20vw; } }
+
+.wrapper {
+  padding: 0.5rem; }
+
+.about {
+  font-weight: 300;
+  width: 100%; }
+  .about__title {
+    font-size: 4.5rem; }
+  .about__description {
+    font-size: clamp(1rem, 2.5vw, 1.5rem);
+    line-height: 1.6;
+    padding: 2rem 0; }
+  .about__button {
+    background-color: var(--button-bg-color);
+    display: block; }
+    .about__button:hover {
+      background: #c82727; }
+
+.skills-container {
+  padding: 5rem; }
+
+.languages {
+  background-color: var(--card-bg-color); }

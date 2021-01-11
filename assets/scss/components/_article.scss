@@ -7,8 +7,7 @@
   }
 
   &__title {
-    font-family: "Playfair Display", serif;
-    font-size: 6rem;
+    @extend %title;
     font-weight: 200;
   }
 }

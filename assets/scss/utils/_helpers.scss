@@ -1,3 +1,14 @@
+%title {
+  font-size: 6rem;
+  font-family: "Playfair Display", serif;
+  font-weight: 100;
+}
+
+%card-title {
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+
 %button {
   display: inline-block;
   padding: 0.9rem;
@@ -6,8 +17,9 @@
 }
 
 %button-lg {
-  display: inline-block;
-  padding: 0.9rem;
-  font-weight: 300;
+  padding: 1.2rem 0.5rem;
+  font-weight: bold;
   border-radius: 0.5rem;
+  text-align: center;
+  cursor: pointer;
 }
