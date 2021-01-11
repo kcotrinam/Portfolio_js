@@ -178,10 +178,25 @@ body {
       .article:nth-child(odd) .article__info {
         grid-column: 1; } }
 
+@media screen and (min-width: 768px) {
+  .wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); } }
+
 .skills-container {
   display: grid;
   grid-template-rows: repeat(4, 1fr);
   grid-gap: 1.5rem; }
+  @media screen and (min-width: 768px) {
+    .skills-container {
+      grid-column: 1;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(2, auto); } }
+
+.about {
+  grid-column: 2;
+  grid-row: 1; }
 
 .languages {
   display: grid;
@@ -370,15 +385,24 @@ body {
         margin-top: 20vw; } }
 
 .wrapper {
-  padding: 0.5rem; }
+  padding: 0.5rem;
+  padding-top: 8.5rem; }
+  @media screen and (min-width: 1200px) {
+    .wrapper {
+      padding: 6.5rem; } }
 
 .about {
-  font-weight: 300;
-  width: 100%; }
+  font-weight: 300; }
+  @media screen and (min-width: 768px) {
+    .about {
+      align-self: center; } }
+  @media screen and (min-width: 992px) {
+    .about {
+      padding-right: 6rem; } }
   .about__title {
-    font-size: 4.5rem; }
+    font-size: clamp(2.5rem, 8vw, 6rem); }
   .about__description {
-    font-size: clamp(1rem, 2.5vw, 1.5rem);
+    font-size: clamp(1rem, 2.5vw, 1.1rem);
     line-height: 1.6;
     padding: 2rem 0; }
   .about__button {
@@ -393,6 +417,9 @@ body {
 .card {
   background-color: var(--card-bg-color);
   padding: 3.5rem 2rem; }
+  @media screen and (min-width: 768px) {
+    .card {
+      padding: 1.2rem 2rem; } }
   .card__icon {
     padding: 0.5rem;
     width: 20px;
@@ -401,13 +428,24 @@ body {
     border-radius: 50%; }
   .card__title {
     margin-top: 2.5rem; }
+    @media screen and (min-width: 768px) {
+      .card__title {
+        font-size: 1.2rem;
+        margin-top: 1.2rem; } }
   .card__list-item {
-    font-weight: 200;
+    font-weight: 300;
     color: #7d7c84;
     margin-top: 1.5rem;
     list-style: initial;
     margin-left: 1.5rem;
     font-size: 1.5rem; }
+    @media screen and (min-width: 768px) {
+      .card__list-item {
+        font-size: clamp(0.5rem, 2vh, 1.5rem);
+        margin-top: 0.5rem; } }
+    @media screen and (min-width: 992px) {
+      .card__list-item {
+        margin-top: 1.2rem; } }
   .card .hash {
     background-color: rgba(34, 176, 124, 0.5); }
   .card .square {

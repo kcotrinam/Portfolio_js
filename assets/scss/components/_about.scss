@@ -1,18 +1,31 @@
 .wrapper {
   padding: 0.5rem;
+  padding-top: 8.5rem;
+
+  @include from(xl) {
+    padding: 6.5rem;
+  }
 }
 
 .about {
   font-weight: 300;
-  width: 100%;
+
+  @include from(md) {
+    align-self: center;
+    // padding: 1.2rem;
+  }
+
+  @include from(lg) {
+    padding-right: 6rem;
+  }
 
   &__title {
     @extend %title;
-    font-size: 4.5rem;
+    font-size: clamp(2.5rem, 8vw, 6rem);
   }
 
   &__description {
-    font-size: clamp(1rem, 2.5vw, 1.5rem);
+    font-size: clamp(1rem, 2.5vw, 1.1rem);
     line-height: 1.6;
     padding: 2rem 0;
   }
