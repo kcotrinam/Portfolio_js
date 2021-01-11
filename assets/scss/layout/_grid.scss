@@ -22,3 +22,14 @@
     }
   }
 }
+
+.skills-container {
+  display: grid;
+  grid-template-rows: repeat(4, 1fr);
+  grid-gap: 1.5rem;
+}
+
+.languages {
+  display: grid;
+  grid-template-rows: repeat(3, auto);
+}

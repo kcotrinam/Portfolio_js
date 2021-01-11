@@ -1,11 +1,44 @@
 .skills-container {
-  padding: 5rem;
+  padding: 2.5rem;
 }
 
-.languages {
+.card {
   background-color: var(--card-bg-color);
+  padding: 3.5rem 2rem;
+
+  &__icon {
+    padding: 0.5rem;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    border-radius: 50%;
+  }
 
   &__title {
     @extend %card-title;
+    margin-top: 2.5rem;
+  }
+
+  &__list-item {
+    font-weight: 200;
+    color: hsl(248, 3, 50.1);
+    margin-top: 1.5rem;
+    list-style: initial;
+    margin-left: 1.5rem;
+    font-size: 1.5rem;
+  }
+
+  & .hash {
+    background-color: hsla(158, 68, 41.1, 0.5);
+  }
+
+  & .square {
+    background-color: hsla(223, 83, 57.1, 0.5);
+  }
+  & .bulb {
+    background-color: hsla(35, 88, 55.1, 0.5);
+  }
+  & .heart {
+    background-color: hsla(0, 67, 57.1, 0.5);
   }
 }
