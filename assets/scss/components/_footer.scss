@@ -1,0 +1,12 @@
+.footer {
+  &__list {
+    margin: auto;
+    @extend %social;
+    width: 50vw;
+    border: 1px solid red;
+  }
+
+  &__list-item svg {
+    fill: white;
+  }
+}

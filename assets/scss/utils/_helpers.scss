@@ -5,6 +5,14 @@
   font-weight: 100;
 }
 
+%social {
+  width: 25%;
+  display: flex;
+  justify-content: space-around;
+  padding-top: 2rem;
+  font-size: 1.75rem;
+}
+
 %card-title {
   font-size: 1.5rem;
   font-weight: 300;
