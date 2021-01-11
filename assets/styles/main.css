@@ -104,7 +104,7 @@ section {
 
 body {
   line-height: 1;
-  background: black; }
+  background-color: #141415; }
 
 ol,
 ul {
@@ -142,6 +142,7 @@ body {
 
 .header__title, .article-container__title, .about__title, .started__title {
   font-size: 5rem;
+  margin-top: 1.2rem;
   font-family: "Playfair Display", serif;
   font-weight: 100; }
 
@@ -149,7 +150,7 @@ body {
   font-size: 1.5rem;
   font-weight: 300; }
 
-.started__description {
+.about__description, .started__description {
   font-size: clamp(1rem, 2.5vw, 1.1rem);
   line-height: 1.6;
   padding: 2rem 0; }
@@ -160,7 +161,7 @@ body {
   font-weight: 300;
   border-radius: 0.5rem; }
 
-.about__button {
+.about__button, .form__button {
   padding: 1.2rem 0.5rem;
   font-weight: bold;
   border-radius: 0.5rem;
@@ -343,7 +344,8 @@ body {
     font-weight: 200; }
 
 .article {
-  margin-top: 2.5rem; }
+  margin-top: 2.5rem;
+  box-shadow: 0px 1.91837px 23.0204px rgba(0, 0, 0, 0.25); }
   .article__info {
     padding: 0.5rem;
     background-position: center;
@@ -409,10 +411,6 @@ body {
     @media screen and (min-width: 768px) {
       .about__title {
         font-size: clamp(2.5rem, 8vw, 6rem); } }
-  .about__description {
-    font-size: clamp(1rem, 2.5vw, 1.1rem);
-    line-height: 1.6;
-    padding: 2rem 0; }
   .about__button {
     background-color: var(--button-bg-color);
     display: block; }
@@ -467,3 +465,46 @@ body {
   padding: 0.5rem; }
   .started__upper {
     font-weight: 300; }
+  .started__title {
+    margin-top: 1.2rem; }
+  @media screen and (min-width: 768px) {
+    .started {
+      max-width: 50vw;
+      margin: auto; } }
+  @media screen and (min-width: 992px) {
+    .started {
+      max-width: 40vw; } }
+
+.form label,
+.form input,
+.form textarea {
+  display: block;
+  font-weight: 300; }
+
+.form label {
+  background: #101010;
+  height: 5.5rem;
+  border-radius: 4px;
+  padding: 1.2rem 1.75rem; }
+
+.form input,
+.form textarea {
+  width: 100%;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  margin-top: 1.5rem;
+  font-weight: 200; }
+
+.form input:focus,
+.form textarea:focus {
+  outline: none; }
+
+.form * + * {
+  margin-top: 0.85rem; }
+
+.form__button {
+  background-color: var(--button-bg-color);
+  width: 100%;
+  font-size: 1.25rem;
+  font-weight: bold; }

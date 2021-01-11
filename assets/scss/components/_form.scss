@@ -1,0 +1,42 @@
+.form {
+  & label,
+  & input,
+  & textarea {
+    display: block;
+    font-weight: 300;
+  }
+
+  & label {
+    background: #101010;
+    height: 5.5rem;
+    border-radius: 4px;
+    padding: 1.2rem 1.75rem;
+  }
+
+  & input,
+  & textarea {
+    width: 100%;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    margin-top: 1.5rem;
+    font-weight: 200;
+  }
+
+  & input:focus,
+  & textarea:focus {
+    outline: none;
+  }
+
+  & * + * {
+    margin-top: 0.85rem;
+  }
+
+  &__button {
+    @extend %button-lg;
+    background-color: var(--button-bg-color);
+    width: 100%;
+    font-size: 1.25rem;
+    font-weight: bold;
+  }
+}
