@@ -1,9 +1,58 @@
 const burgerBtn = document.querySelector('#burger-btn');
-const dashList = [...document.querySelectorAll('#burger-btn span')]
-const menu = document.querySelector('#navbar-list')
 const template = document.querySelector('.article-template').content
 
+const projects = [
+  {
+    name: 'Movie Life',
+    languages: [
+      'Ruby',
+      'SCSS',
+      'Ruby on Rails'
+    ],
+    image: 'movielife-mockup.jpg'
+  },
+  {
+    name: 'Kika Homemade',
+    languages: [
+      'Ruby',
+      'SCSS',
+      'Ruby on Rails'
+    ],
+    image: 'kika-mockup.png'
+  },
+  {
+    name: 'Telegram Bot',
+    languages: [
+      'Ruby',
+      'SCSS',
+      'Ruby on Rails'
+    ],
+    image: 'bot-mockup.png'
+  },
+  {
+    name: 'Movie Life',
+    languages: [
+      'Ruby',
+      'SCSS',
+      'Ruby on Rails'
+    ],
+    image: 'movielife-mockup.jpg'
+  },
+  {
+    name: 'Movie Life',
+    languages: [
+      'Ruby',
+      'SCSS',
+      'Ruby on Rails'
+    ],
+    image: 'movielife-mockup.jpg'
+  }
+]
+
 burgerBtn.addEventListener('click', () => {
+  const menu = document.querySelector('#navbar-list')
+  const dashList = [...document.querySelectorAll('#burger-btn span')]
+
   dashList.map((el,idx) => {
     switch (idx) {
       case 0:
@@ -55,11 +104,11 @@ const fillArticleTemplate = (title, lg, img) => {
   const templateInfo = copyTemplate.querySelector('.article__info')
   const templateImage = [...copyTemplate.querySelectorAll('.article__img')]
   
-  templateImage.map(el => {
-    el.style.background = `url(assets/img/${img}.jpg) center/cover`;
+  templateImage.map( image => {
+    image.style.background = `url(assets/img/default.png) center/cover`;
   })
 
-  templateInfo.style.background = `url(assets/img/${img}.jpg) center/cover`;
+  templateInfo.style.background = `url(assets/img/${img}) center/cover`;
 
   copyTemplate.querySelector('.article__name').textContent = title
   languages.map( (el, idx)  => {
@@ -68,5 +117,8 @@ const fillArticleTemplate = (title, lg, img) => {
   articlesContainer.appendChild(copyTemplate)
 }
 
-fillArticleTemplate("article1", ["js", "css", "ruby"], 'mockup')
-// fillArticleTemplate("article2", ["nodeJs", "Java", "RoR"], 'mockup')
+( () => {
+  projects.map(project => {
+    fillArticleTemplate(project.name, project.languages, `${project.image}`)
+  })
+})()
