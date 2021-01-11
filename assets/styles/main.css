@@ -465,8 +465,6 @@ body {
   padding: 0.5rem; }
   .started__upper {
     font-weight: 300; }
-  .started__title {
-    margin-top: 1.2rem; }
   @media screen and (min-width: 768px) {
     .started {
       max-width: 50vw;
@@ -501,10 +499,12 @@ body {
   outline: none; }
 
 .form * + * {
-  margin-top: 0.85rem; }
+  margin-top: 1.2rem; }
 
 .form__button {
   background-color: var(--button-bg-color);
   width: 100%;
   font-size: 1.25rem;
   font-weight: bold; }
+  .form__button:hover {
+    background-color: #c82727; }
