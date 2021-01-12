@@ -162,7 +162,7 @@ body {
   line-height: 1.6;
   padding: 2rem 0; }
 
-.article__button {
+.article__button, .footer__button a {
   display: inline-block;
   padding: 0.9rem;
   font-weight: 300;
@@ -511,10 +511,31 @@ body {
   .form__button:hover {
     background-color: #c82727; }
 
-.footer__list {
-  margin: auto;
-  width: 50vw;
-  border: 1px solid red; }
-
-.footer__list-item svg {
-  fill: white; }
+.footer {
+  padding: 0.5rem;
+  margin: 10rem 1rem 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.1); }
+  @media screen and (min-width: 768px) {
+    .footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center; } }
+  .footer__list {
+    margin: auto;
+    width: 50vw;
+    padding: 2rem; }
+    @media screen and (min-width: 768px) {
+      .footer__list {
+        margin: 0;
+        width: auto; }
+        .footer__list * + * {
+          margin-left: 1.4rem; } }
+  .footer__list-item svg {
+    fill: white; }
+    .footer__list-item svg:hover {
+      fill: #db4848; }
+  .footer__button a {
+    color: #db4848;
+    font-size: 1.5rem; }
+    .footer__button a span {
+      margin-left: 1.2rem; }

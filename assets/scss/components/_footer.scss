@@ -1,12 +1,45 @@
 .footer {
+  padding: 0.5rem;
+  margin: 10rem 1rem 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+
+  @include from(md) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
   &__list {
     margin: auto;
     @extend %social;
     width: 50vw;
-    border: 1px solid red;
+    padding: 2rem;
+
+    @include from(md) {
+      margin: 0;
+      width: auto;
+
+      & * + * {
+        margin-left: 1.4rem;
+      }
+    }
   }
 
   &__list-item svg {
     fill: white;
+
+    &:hover {
+      fill: hsl(0, 67, 57.1);
+    }
+  }
+
+  &__button a {
+    @extend %button;
+    color: hsl(0, 67, 57.1);
+    font-size: 1.5rem;
+
+    & span {
+      margin-left: 1.2rem;
+    }
   }
 }
