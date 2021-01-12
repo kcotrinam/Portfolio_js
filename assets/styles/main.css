@@ -223,14 +223,13 @@ body {
   width: 100%;
   display: flex;
   justify-content: flex-end;
-  padding: 0.5rem;
-  background: black; }
+  padding: 0.5rem; }
   .navbar__list {
     width: 30vw;
     position: absolute;
     top: 0;
     right: -100%;
-    background: black;
+    background: rgba(0, 0, 0, 0.2);
     font-size: 1.2rem;
     padding: 3rem 0;
     transition: right 0.3s linear; }
