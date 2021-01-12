@@ -9,6 +9,7 @@ const projects = [
       'SCSS',
       'Ruby on Rails'
     ],
+    description: 'This is the description of the article',
     image: 'movielife-mockup.jpg'
   },
   {
@@ -18,6 +19,7 @@ const projects = [
       'SCSS',
       'Ruby on Rails'
     ],
+    description: 'This is the description of the article',
     image: 'kika-mockup.png'
   },
   {
@@ -27,6 +29,7 @@ const projects = [
       'SCSS',
       'Ruby on Rails'
     ],
+    description: 'This is the description of the article',
     image: 'bot-mockup.png'
   },
   {
@@ -36,6 +39,7 @@ const projects = [
       'SCSS',
       'Ruby on Rails'
     ],
+    description: 'This is the description of the article',
     image: 'movielife-mockup.jpg'
   },
   {
@@ -45,6 +49,7 @@ const projects = [
       'SCSS',
       'Ruby on Rails'
     ],
+    description: 'This is the description of the article',
     image: 'movielife-mockup.jpg'
   }
 ]
@@ -122,3 +127,40 @@ const fillArticleTemplate = (title, lg, img) => {
     fillArticleTemplate(project.name, project.languages, `${project.image}`)
   })
 })()
+
+const seeProjectButtons = [...document.querySelectorAll('.article__button')]
+const modalTemplate = document.querySelector('.modal-article-template').content
+const modalContainer = document.querySelector('.modal-container')
+const closeModalBtn = document.getElementById('close-modal')
+
+
+const fillModalTemplate = (idx) => {
+  const copyArticleTemplate = document.importNode(modalTemplate, true)
+  const modalTitle = copyArticleTemplate.querySelector('.modal-article__name')
+  const modalImg = copyArticleTemplate.querySelector('.modal-article__img-container img')
+  const modalDescription = copyArticleTemplate.querySelector('.modal-article__description')
+  modalTitle.textContent = `${projects[idx].name}`
+  modalImg.src = `assets/img/${projects[idx].image}`
+  modalDescription.textContent = projects[idx].description
+  modalContainer.textContent = ''
+  modalContainer.appendChild(copyArticleTemplate)
+
+}
+
+const showArticleModal = () => {
+  seeProjectButtons.map((button, idx) => {
+    button.addEventListener('click', (e) => {
+      modalContainer.classList.add('show-modal')
+      fillModalTemplate(idx)
+    })
+  })
+}
+
+(() => {
+  closeModalBtn.addEventListener('click', () => {
+    modalContainer.classList.remove('show-modal')
+  })
+})()
+
+
+showArticleModal()
