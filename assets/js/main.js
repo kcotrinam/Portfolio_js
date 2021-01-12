@@ -132,6 +132,7 @@ const seeProjectButtons = [...document.querySelectorAll('.article__button')]
 const modalTemplate = document.querySelector('.modal-article-template').content
 const modalContainer = document.querySelector('.modal-container')
 const closeModalBtn = document.getElementById('close-modal')
+const articleModalContainer = document.querySelector('#modal-container')
 
 
 const fillModalTemplate = (idx) => {
@@ -139,11 +140,18 @@ const fillModalTemplate = (idx) => {
   const modalTitle = copyArticleTemplate.querySelector('.modal-article__name')
   const modalImg = copyArticleTemplate.querySelector('.modal-article__img-container img')
   const modalDescription = copyArticleTemplate.querySelector('.modal-article__description')
+  const langs = [...copyArticleTemplate.querySelectorAll('.modal-article__list-item')]
+  
   modalTitle.textContent = `${projects[idx].name}`
   modalImg.src = `assets/img/${projects[idx].image}`
   modalDescription.textContent = projects[idx].description
-  modalContainer.textContent = ''
-  modalContainer.appendChild(copyArticleTemplate)
+
+  langs.map((lang, idx) => [
+    lang.textContent = projects[idx].languages[idx] 
+  ])
+
+  articleModalContainer.textContent = ''
+  articleModalContainer.appendChild(copyArticleTemplate)
 
 }
 
@@ -164,3 +172,23 @@ const showArticleModal = () => {
 
 
 showArticleModal()
+
+
+
+
+//CARROUSEL
+
+// const articleList = [...document.querySelectorAll('.article')]
+// const copyArticleList = [...articleList]
+// const carrouselContainer = document.querySelector('.carrousel')
+// const nextBtn = document.getElementById('next')
+// let c = 0
+
+// nextBtn.addEventListener('click', () => {
+//   carrouselContainer.textContent = ''
+//   carrouselContainer.appendChild(copyArticleList[c])
+//   c++
+// })
+
+
+

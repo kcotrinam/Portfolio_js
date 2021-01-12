@@ -582,3 +582,7 @@ body {
   .modal-article__img-container img {
     object-fit: cover;
     width: 100%; }
+
+.carrousel {
+  height: 500px;
+  border: 1px solid red; }
