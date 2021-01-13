@@ -9,47 +9,47 @@
     width: 50vw;
     padding: 2rem;
   }
-}
 
-&__list-item svg {
-  fill: white;
+  &__list-item svg {
+    fill: white;
 
-  &:hover {
-    fill: hsl(0, 67, 57.1);
-  }
-}
-
-&__button a {
-  @extend %button;
-  color: $red;
-  font-size: 1.5rem;
-  display: flex;
-  align-items: center;
-
-  & span {
-    margin-left: 1.2rem;
+    &:hover {
+      fill: hsl(0, 67, 57.1);
+    }
   }
 
-  & svg {
-    fill: $red;
+  &__button a {
+    @extend %button;
+    color: $red;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+
+    & span {
+      margin-left: 1.2rem;
+    }
+
+    & svg {
+      fill: $red;
+    }
+
+    &:hover {
+      text-decoration: underline;
+    }
   }
 
-  &:hover {
-    text-decoration: underline;
-  }
-}
+  @include from(md) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 
-@include from(md) {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+    &__list {
+      margin: 0;
+      width: auto;
 
-  &__list {
-    margin: 0;
-    width: auto;
-
-    & * + * {
-      margin-left: 1.4rem;
+      & * + * {
+        margin-left: 1.4rem;
+      }
     }
   }
 }

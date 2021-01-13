@@ -23,12 +23,6 @@
   grid-template-rows: auto 1fr;
   padding-bottom: 1.5rem;
   transition: transform 0.5s;
-
-  @include from(md) {
-    // width: 80vw;
-    // height: 80vh;
-    // background: black;
-  }
 }
 
 #modal-container {
@@ -70,10 +64,6 @@
       display: block;
       margin: 0 auto;
     }
-
-    @include from(lg) {
-      width: 100%;
-    }
   }
 
   &__list {
@@ -93,19 +83,6 @@
   &__description {
     @extend %description;
     padding: 0.5rem 0;
-
-    @include from(lg) {
-      font-size: clamp(0.5rem, 1.25vw, 1.4rem);
-    }
-  }
-
-  &__buttons {
-    @include from(lg) {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      width: 80%;
-    }
   }
 
   &__button {
@@ -136,6 +113,21 @@
       &:last-child {
         margin-left: 1.75rem;
       }
+    }
+
+    &__img-container img {
+      width: 100%;
+    }
+
+    &__description {
+      font-size: clamp(0.5rem, 1.25vw, 1.4rem);
+    }
+
+    &__buttons {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 80%;
     }
   }
 }

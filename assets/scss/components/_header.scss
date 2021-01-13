@@ -26,16 +26,12 @@
   }
 
   @include from(md) {
-    & {
-      max-width: 50vw;
-      margin: auto;
-    }
+    max-width: 50vw;
+    margin: auto;
   }
 
   @include from(lg) {
-    & {
-      max-width: 40vw;
-      margin: auto;
-    }
+    max-width: 40vw;
+    margin: auto;
   }
 }

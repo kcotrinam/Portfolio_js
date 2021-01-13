@@ -6,10 +6,6 @@
   background-color: var(--card-bg-color);
   padding: 3.5rem 2rem;
 
-  @include from(md) {
-    padding: 1.2rem 2rem;
-  }
-
   &__icon {
     padding: 0.5rem;
     width: 20px;
@@ -21,11 +17,6 @@
   &__title {
     @extend %card-title;
     margin-top: 2.5rem;
-
-    @include from(md) {
-      font-size: 1.2rem;
-      margin-top: 1.2rem;
-    }
   }
 
   &__list-item {
@@ -35,15 +26,6 @@
     list-style: initial;
     margin-left: 1.5rem;
     font-size: 1.5rem;
-
-    @include from(md) {
-      font-size: clamp(0.5rem, 2vh, 1.5rem);
-      margin-top: 0.5rem;
-    }
-
-    @include from(lg) {
-      margin-top: 1.2rem;
-    }
   }
 
   & .hash {
@@ -58,5 +40,22 @@
   }
   & .heart {
     background-color: hsla(0, 67, 57.1, 0.5);
+  }
+
+  @include from(md) {
+    padding: 1.2rem 2rem;
+    font-size: clamp(0.5rem, 2vh, 1.5rem);
+    margin-top: 0.5rem;
+
+    &__title {
+      font-size: 1.2rem;
+      margin-top: 1.2rem;
+    }
+
+    @include from(lg) {
+      &__list-item {
+        margin-top: 1.2rem;
+      }
+    }
   }
 }

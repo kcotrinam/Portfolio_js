@@ -424,22 +424,21 @@ body {
 
 .about {
   font-weight: 300; }
-  @media screen and (min-width: 768px) {
-    .about {
-      align-self: center; } }
-  @media screen and (min-width: 992px) {
-    .about {
-      padding-right: 6rem; } }
   .about__title {
     font-size: 5.5rem; }
-    @media screen and (min-width: 768px) {
-      .about__title {
-        font-size: clamp(2.5rem, 8vw, 6rem); } }
   .about__button {
     background-color: var(--button-bg-color);
     display: block; }
     .about__button:hover {
       background: #c82727; }
+  @media screen and (min-width: 768px) {
+    .about {
+      align-self: center; }
+      .about__title {
+        font-size: clamp(2.5rem, 8vw, 6rem); } }
+  @media screen and (min-width: 992px) {
+    .about {
+      padding-right: 6rem; } }
 
 .skills-container {
   padding: 2.5rem; }
@@ -447,9 +446,6 @@ body {
 .card {
   background-color: var(--card-bg-color);
   padding: 3.5rem 2rem; }
-  @media screen and (min-width: 768px) {
-    .card {
-      padding: 1.2rem 2rem; } }
   .card__icon {
     padding: 0.5rem;
     width: 20px;
@@ -458,10 +454,6 @@ body {
     border-radius: 50%; }
   .card__title {
     margin-top: 2.5rem; }
-    @media screen and (min-width: 768px) {
-      .card__title {
-        font-size: 1.2rem;
-        margin-top: 1.2rem; } }
   .card__list-item {
     font-weight: 300;
     color: #7d7c84;
@@ -469,13 +461,6 @@ body {
     list-style: initial;
     margin-left: 1.5rem;
     font-size: 1.5rem; }
-    @media screen and (min-width: 768px) {
-      .card__list-item {
-        font-size: clamp(0.5rem, 2vh, 1.5rem);
-        margin-top: 0.5rem; } }
-    @media screen and (min-width: 992px) {
-      .card__list-item {
-        margin-top: 1.2rem; } }
   .card .hash {
     background-color: rgba(34, 176, 124, 0.5); }
   .card .square {
@@ -484,6 +469,17 @@ body {
     background-color: rgba(241, 157, 40, 0.5); }
   .card .heart {
     background-color: rgba(219, 72, 72, 0.5); }
+  @media screen and (min-width: 768px) {
+    .card {
+      padding: 1.2rem 2rem;
+      font-size: clamp(0.5rem, 2vh, 1.5rem);
+      margin-top: 0.5rem; }
+      .card__title {
+        font-size: 1.2rem;
+        margin-top: 1.2rem; } }
+  @media screen and (min-width: 768px) and (min-width: 992px) {
+    .card__list-item {
+      margin-top: 1.2rem; } }
 
 .started {
   padding: 0.5rem; }
@@ -537,21 +533,10 @@ body {
   padding: 0.5rem;
   margin: 10rem 1rem 0;
   border-top: 1px solid rgba(255, 255, 255, 0.1); }
-  @media screen and (min-width: 768px) {
-    .footer {
-      display: flex;
-      justify-content: space-between;
-      align-items: center; } }
   .footer__list {
     margin: auto;
     width: 50vw;
     padding: 2rem; }
-    @media screen and (min-width: 768px) {
-      .footer__list {
-        margin: 0;
-        width: auto; }
-        .footer__list * + * {
-          margin-left: 1.4rem; } }
   .footer__list-item svg {
     fill: white; }
     .footer__list-item svg:hover {
@@ -567,6 +552,16 @@ body {
       fill: #db4848; }
     .footer__button a:hover {
       text-decoration: underline; }
+  @media screen and (min-width: 768px) {
+    .footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center; }
+      .footer__list {
+        margin: 0;
+        width: auto; }
+        .footer__list * + * {
+          margin-left: 1.4rem; } }
 
 #close-modal {
   font-size: 2.5rem;
@@ -619,9 +614,6 @@ body {
         width: 70%;
         display: block;
         margin: 0 auto; } }
-    @media screen and (min-width: 992px) {
-      .modal-article__img-container img {
-        width: 100%; } }
   .modal-article__list {
     display: flex;
     justify-content: space-around;
@@ -634,15 +626,6 @@ body {
     font-weight: 200; }
   .modal-article__description {
     padding: 0.5rem 0; }
-    @media screen and (min-width: 992px) {
-      .modal-article__description {
-        font-size: clamp(0.5rem, 1.25vw, 1.4rem); } }
-  @media screen and (min-width: 992px) {
-    .modal-article__buttons {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      width: 80%; } }
   .modal-article__button {
     display: block;
     padding-top: 0.5rem;
@@ -661,7 +644,16 @@ body {
       display: flex;
       align-items: center; }
       .modal-article__button:last-child {
-        margin-left: 1.75rem; } }
+        margin-left: 1.75rem; }
+    .modal-article__img-container img {
+      width: 100%; }
+    .modal-article__description {
+      font-size: clamp(0.5rem, 1.25vw, 1.4rem); }
+    .modal-article__buttons {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 80%; } }
 
 .carrousel {
   height: 500px;
