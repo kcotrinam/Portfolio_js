@@ -1,6 +1,10 @@
 .header {
   font-weight: 200;
   padding: 1.75rem 0.75rem;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 
   & * + * {
     margin-top: 0.75rem;
@@ -21,8 +25,9 @@
   }
 
   &__description {
-    font-size: clamp(1rem, 2.5vw, 1.5rem);
-    line-height: 18px;
+    font-size: clamp(1rem, 2.5vw, 1.2rem);
+    letter-spacing: 1.5px;
+    line-height: 22px;
   }
 
   @include from(md) {

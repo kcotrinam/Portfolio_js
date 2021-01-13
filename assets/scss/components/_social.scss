@@ -11,6 +11,8 @@
   &__list {
     @extend %social;
     border-top: 2px solid white;
+    display: flex;
+    align-items: center;
   }
 
   &__list-item:hover {

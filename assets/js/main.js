@@ -149,7 +149,7 @@ const fillModalTemplate = (idx) => {
   
   modalTitle.textContent = `${projects[idx].name}`
   modalImg.src = `assets/img/${projects[idx].image.main}`
-  startCarrousel(modalImg, idx, 2000)
+  startCarrousel(modalImg, idx, 2500)
   modalDescription.textContent = projects[idx].description
 
   langs.map((lang, idx) => [
@@ -179,9 +179,7 @@ const showArticleModal = () => {
 showArticleModal()
 
 
-const carr = document.querySelector('.carrousel img')
 let n = 1
-
 const displayCarrousel = (carrouselContainer, idx) => {
   if(n > 2) {
     n = 0

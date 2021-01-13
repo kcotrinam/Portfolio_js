@@ -309,7 +309,11 @@ body {
 
 .header {
   font-weight: 200;
-  padding: 1.75rem 0.75rem; }
+  padding: 1.75rem 0.75rem;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; }
   .header * + * {
     margin-top: 0.75rem; }
   .header__title {
@@ -320,8 +324,9 @@ body {
     .header__title span:last-child {
       margin-left: 5vw; }
   .header__description {
-    font-size: clamp(1rem, 2.5vw, 1.5rem);
-    line-height: 18px; }
+    font-size: clamp(1rem, 2.5vw, 1.2rem);
+    letter-spacing: 1.5px;
+    line-height: 22px; }
   @media screen and (min-width: 768px) {
     .header {
       max-width: 50vw;
@@ -339,7 +344,9 @@ body {
     padding-bottom: 2rem;
     font-weight: 300; }
   .social__list {
-    border-top: 2px solid white; }
+    border-top: 2px solid white;
+    display: flex;
+    align-items: center; }
   .social__list-item:hover {
     transition: transform 0.5s;
     transform: rotateY(360deg); }
