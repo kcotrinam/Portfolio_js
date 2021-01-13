@@ -10,48 +10,52 @@ const projects = [
       'Ruby on Rails'
     ],
     description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga quam rem eligendi, consequuntur modi porro quia a nam, vero corporis distinctio voluptatem id, consequatur deserunt ipsam. Odit tenetur animi fugiat.Ratione molestiae deserunt facere magni animi eius id. Tempora eaque doloribus in. Reiciendis repellendus laboriosam aliquam earum nam ipsum, enim beatae quos quam saepe quidem nobis ut voluptatum, deleniti porro?Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga quam rem eligendi, consequuntur modi porro quia a nam, vero corporis distinctio ',
-    image: 'movielife-mockup.jpg'
-  },
-  {
-    name: 'Kika Homemade',
-    languages: [
-      'Ruby',
-      'SCSS',
-      'Ruby on Rails'
-    ],
-    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga quam rem eligendi, consequuntur modi porro quia a nam, vero corporis distinctio voluptatem id, consequatur deserunt ipsam. Odit tenetur animi fugiat.Ratione molestiae deserunt facere magni animi eius id. Tempora eaque doloribus in. Reiciendis repellendus laboriosam aliquam earum nam ipsum, enim beatae quos quam saepe quidem nobis ut voluptatum, deleniti porro?Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga quam rem eligendi, consequuntur modi porro quia a nam, vero corporis distinctio ',
-    image: 'kika-mockup.png'
-  },
-  {
-    name: 'Telegram Bot',
-    languages: [
-      'Ruby',
-      'SCSS',
-      'Ruby on Rails'
-    ],
-    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga quam rem eligendi, consequuntur modi porro quia a nam, vero corporis distinctio voluptatem id, consequatur deserunt ipsam. Odit tenetur animi fugiat.Ratione molestiae deserunt facere magni animi eius id. Tempora eaque doloribus in. Reiciendis repellendus laboriosam aliquam earum nam ipsum, enim beatae quos quam saepe quidem nobis ut voluptatum, deleniti porro?Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga quam rem eligendi, consequuntur modi porro quia a nam, vero corporis distinctio',
-    image: 'bot-mockup.png'
-  },
-  {
-    name: 'Movie Life',
-    languages: [
-      'Ruby',
-      'SCSS',
-      'Ruby on Rails'
-    ],
-    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga quam rem eligendi, consequuntur modi porro quia a nam, vero corporis distinctio voluptatem id, consequatur deserunt ipsam. Odit tenetur animi fugiat.Ratione molestiae deserunt facere magni animi eius id. Tempora eaque doloribus in. Reiciendis repellendus laboriosam aliquam earum nam ipsum, enim beatae quos quam saepe quidem nobis ut voluptatum, deleniti porro?Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga quam rem eligendi, consequuntur modi porro quia a nam, vero corporis distinctio ',
-    image: 'movielife-mockup.jpg'
-  },
-  {
-    name: 'Movie Life',
-    languages: [
-      'Ruby',
-      'SCSS',
-      'Ruby on Rails'
-    ],
-    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga quam rem eligendi, consequuntur modi porro quia a nam, vero corporis distinctio voluptatem id, consequatur deserunt ipsam. Odit tenetur animi fugiat.Ratione molestiae deserunt facere magni animi eius id. Tempora eaque doloribus in. Reiciendis repellendus laboriosam aliquam earum nam ipsum, enim beatae quos quam saepe quidem nobis ut voluptatum, deleniti porro?Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga quam rem eligendi, consequuntur modi porro quia a nam, vero corporis distinctio',
-    image: 'movielife-mockup.jpg'
+    image: {
+      main: 'movielife-mockup.jpg',
+      upper: 'movielife1.png',
+      lower: 'movielife2.png'
+    }
   }
+  // {
+  //   name: 'Kika Homemade',
+  //   languages: [
+  //     'Ruby',
+  //     'SCSS',
+  //     'Ruby on Rails'
+  //   ],
+  //   description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga quam rem eligendi, consequuntur modi porro quia a nam, vero corporis distinctio voluptatem id, consequatur deserunt ipsam. Odit tenetur animi fugiat.Ratione molestiae deserunt facere magni animi eius id. Tempora eaque doloribus in. Reiciendis repellendus laboriosam aliquam earum nam ipsum, enim beatae quos quam saepe quidem nobis ut voluptatum, deleniti porro?Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga quam rem eligendi, consequuntur modi porro quia a nam, vero corporis distinctio ',
+  //   image: 'kika-mockup.png'
+  // },
+  // {
+  //   name: 'Telegram Bot',
+  //   languages: [
+  //     'Ruby',
+  //     'SCSS',
+  //     'Ruby on Rails'
+  //   ],
+  //   description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga quam rem eligendi, consequuntur modi porro quia a nam, vero corporis distinctio voluptatem id, consequatur deserunt ipsam. Odit tenetur animi fugiat.Ratione molestiae deserunt facere magni animi eius id. Tempora eaque doloribus in. Reiciendis repellendus laboriosam aliquam earum nam ipsum, enim beatae quos quam saepe quidem nobis ut voluptatum, deleniti porro?Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga quam rem eligendi, consequuntur modi porro quia a nam, vero corporis distinctio',
+  //   image: 'bot-mockup.png'
+  // },
+  // {
+  //   name: 'Movie Life',
+  //   languages: [
+  //     'Ruby',
+  //     'SCSS',
+  //     'Ruby on Rails'
+  //   ],
+  //   description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga quam rem eligendi, consequuntur modi porro quia a nam, vero corporis distinctio voluptatem id, consequatur deserunt ipsam. Odit tenetur animi fugiat.Ratione molestiae deserunt facere magni animi eius id. Tempora eaque doloribus in. Reiciendis repellendus laboriosam aliquam earum nam ipsum, enim beatae quos quam saepe quidem nobis ut voluptatum, deleniti porro?Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga quam rem eligendi, consequuntur modi porro quia a nam, vero corporis distinctio ',
+  //   image: 'movielife-mockup.jpg'
+  // },
+  // {
+  //   name: 'Movie Life',
+  //   languages: [
+  //     'Ruby',
+  //     'SCSS',
+  //     'Ruby on Rails'
+  //   ],
+  //   description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga quam rem eligendi, consequuntur modi porro quia a nam, vero corporis distinctio voluptatem id, consequatur deserunt ipsam. Odit tenetur animi fugiat.Ratione molestiae deserunt facere magni animi eius id. Tempora eaque doloribus in. Reiciendis repellendus laboriosam aliquam earum nam ipsum, enim beatae quos quam saepe quidem nobis ut voluptatum, deleniti porro?Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga quam rem eligendi, consequuntur modi porro quia a nam, vero corporis distinctio',
+  //   image: 'movielife-mockup.jpg'
+  // }
 ]
 
 burgerBtn.addEventListener('click', () => {
@@ -101,19 +105,17 @@ const displayLetterByLetter = (destination, destination2, message, speed ) => {
 
 displayLetterByLetter('firstname', 'lastname' ,'Kevin Cotrina', 150)
 
-
 const fillArticleTemplate = (title, lg, img) => {
   const copyTemplate = document.importNode(template, true)
   const articlesContainer = document.querySelector('.article-container')
   const languages = [...copyTemplate.querySelectorAll('.article__list-item')]
   const templateInfo = copyTemplate.querySelector('.article__info')
-  const templateImage = [...copyTemplate.querySelectorAll('.article__img')]
-  
-  templateImage.map( image => {
-    image.style.background = `url(assets/img/default.png) center/cover`;
-  })
+  const [upperImg, lowerImg] = [...copyTemplate.querySelectorAll('.article__img')]
 
-  templateInfo.style.background = `url(assets/img/${img}) center/cover`;
+  upperImg.style.background = `url(assets/img/${img.upper}) top/cover`;
+  lowerImg.style.background = `url(assets/img/${img.lower}) top/cover`;
+  console.log(img)
+  templateInfo.style.background = `url(assets/img/${img.main}) center/cover`;
 
   copyTemplate.querySelector('.article__name').textContent = title
   languages.map( (el, idx)  => {
@@ -124,7 +126,7 @@ const fillArticleTemplate = (title, lg, img) => {
 
 ( () => {
   projects.map(project => {
-    fillArticleTemplate(project.name, project.languages, `${project.image}`)
+    fillArticleTemplate(project.name, project.languages, project.image)
   })
 })()
 
@@ -170,25 +172,4 @@ const showArticleModal = () => {
   })
 })()
 
-
 showArticleModal()
-
-
-
-
-//CARROUSEL
-
-// const articleList = [...document.querySelectorAll('.article')]
-// const copyArticleList = [...articleList]
-// const carrouselContainer = document.querySelector('.carrousel')
-// const nextBtn = document.getElementById('next')
-// let c = 0
-
-// nextBtn.addEventListener('click', () => {
-//   carrouselContainer.textContent = ''
-//   carrouselContainer.appendChild(copyArticleList[c])
-//   c++
-// })
-
-
-
