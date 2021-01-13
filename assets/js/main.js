@@ -19,9 +19,9 @@ const projects = [
   {
     name: 'Kika Homemade',
     languages: [
-      'Ruby',
+      'HTML5',
       'SCSS',
-      'Ruby on Rails'
+      'CSS'
     ],
     description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga quam rem eligendi, consequuntur modi porro quia a nam, vero corporis distinctio voluptatem id, consequatur deserunt ipsam. Odit tenetur animi fugiat.Ratione molestiae deserunt facere magni animi eius id. Tempora eaque doloribus in. Reiciendis repellendus laboriosam aliquam earum nam ipsum, enim beatae quos quam saepe quidem nobis ut voluptatum, deleniti porro?Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga quam rem eligendi, consequuntur modi porro quia a nam, vero corporis distinctio ',
     image: {
@@ -45,11 +45,11 @@ const projects = [
   //   }
   // }
   {
-    name: 'Movie Life',
+    name: 'News Week',
     languages: [
-      'Ruby',
-      'SCSS',
-      'Ruby on Rails'
+      'HTML5',
+      'CSS3',
+      'Bootstrap'
     ],
     description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga quam rem eligendi, consequuntur modi porro quia a nam, vero corporis distinctio voluptatem id, consequatur deserunt ipsam. Odit tenetur animi fugiat.Ratione molestiae deserunt facere magni animi eius id. Tempora eaque doloribus in. Reiciendis repellendus laboriosam aliquam earum nam ipsum, enim beatae quos quam saepe quidem nobis ut voluptatum, deleniti porro?Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga quam rem eligendi, consequuntur modi porro quia a nam, vero corporis distinctio ',
     image: {
