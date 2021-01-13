@@ -14,7 +14,12 @@ const projects = [
       main: 'movielife-mockup.jpg',
       upper: 'movielife1.png',
       lower: 'movielife2.png'
-    }
+    },
+    carrousel: [
+      'movielife-mockup.jpg',
+      'movielife1.png',
+      'movielife2.png'
+    ]
   },
   {
     name: 'Kika Homemade',
@@ -28,22 +33,13 @@ const projects = [
       main: 'kika-mockup.png',
       upper: 'kika1.png',
       lower: 'kika2.png'
-    }
+    },
+    carrousel: [
+      'kika-mockup.png',
+      'kika1.png',
+      'kika2.png'
+    ]
   },
-  // {
-  //   name: 'Telegram Bot',
-  //   languages: [
-  //     'Ruby',
-  //     'SCSS',
-  //     'Ruby on Rails'
-  //   ],
-  //   description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga quam rem eligendi, consequuntur modi porro quia a nam, vero corporis distinctio voluptatem id, consequatur deserunt ipsam. Odit tenetur animi fugiat.Ratione molestiae deserunt facere magni animi eius id. Tempora eaque doloribus in. Reiciendis repellendus laboriosam aliquam earum nam ipsum, enim beatae quos quam saepe quidem nobis ut voluptatum, deleniti porro?Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga quam rem eligendi, consequuntur modi porro quia a nam, vero corporis distinctio',
-  //   image: {
-  //     main: 'bot-mockup.png',
-  //     upper: 'kika1.png',
-  //     lower: 'kika2.png'
-  //   }
-  // }
   {
     name: 'News Week',
     languages: [
@@ -56,18 +52,14 @@ const projects = [
       main: 'newsweek-mockup.png',
       upper: 'newsweek1.png',
       lower: 'newsweek2.png'
-    }
+    },
+    carrousel: [
+      'newsweek-mockup.png',
+      'newsweek1.png',
+      'newsweek2.png'
+    ]
   }
-  // {
-  //   name: 'Movie Life',
-  //   languages: [
-  //     'Ruby',
-  //     'SCSS',
-  //     'Ruby on Rails'
-  //   ],
-  //   description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga quam rem eligendi, consequuntur modi porro quia a nam, vero corporis distinctio voluptatem id, consequatur deserunt ipsam. Odit tenetur animi fugiat.Ratione molestiae deserunt facere magni animi eius id. Tempora eaque doloribus in. Reiciendis repellendus laboriosam aliquam earum nam ipsum, enim beatae quos quam saepe quidem nobis ut voluptatum, deleniti porro?Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga quam rem eligendi, consequuntur modi porro quia a nam, vero corporis distinctio',
-  //   image: 'movielife-mockup.jpg'
-  // }
+
 ]
 
 burgerBtn.addEventListener('click', () => {
@@ -126,7 +118,6 @@ const fillArticleTemplate = (title, lg, img) => {
 
   upperImg.style.background = `url(assets/img/${img.upper}) top/cover`;
   lowerImg.style.background = `url(assets/img/${img.lower}) top/cover`;
-  console.log(img)
   templateInfo.style.background = `url(assets/img/${img.main}) center/cover`;
 
   copyTemplate.querySelector('.article__name').textContent = title
@@ -157,7 +148,8 @@ const fillModalTemplate = (idx) => {
   const langs = [...copyArticleTemplate.querySelectorAll('.modal-article__list-item')]
   
   modalTitle.textContent = `${projects[idx].name}`
-  modalImg.src = `assets/img/${projects[idx].image}`
+  modalImg.src = `assets/img/${projects[idx].image.main}`
+  startCarrousel(modalImg, idx, 2000)
   modalDescription.textContent = projects[idx].description
 
   langs.map((lang, idx) => [
@@ -185,3 +177,23 @@ const showArticleModal = () => {
 })()
 
 showArticleModal()
+
+
+const carr = document.querySelector('.carrousel img')
+let n = 1
+
+const displayCarrousel = (carrouselContainer, idx) => {
+  if(n > 2) {
+    n = 0
+  }
+  carrouselContainer.src = `assets/img/${projects[idx].carrousel[n]}`
+    n++
+}
+
+const startCarrousel = (container, projectIdx, speed) => {
+  setInterval(() => {
+    displayCarrousel(container, projectIdx)
+  }, speed);
+}
+ 
+// startCarrousel(carr, 0, 1500)

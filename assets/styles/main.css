@@ -606,14 +606,19 @@ body {
     font-size: 2.5rem;
     text-align: center; }
   .modal-article__img-container img {
-    object-fit: cover;
+    object-fit: fill;
     width: 100%;
-    height: 100%; }
+    height: 100%;
+    height: 250px; }
     @media screen and (min-width: 768px) {
       .modal-article__img-container img {
-        width: 70%;
+        width: 100%;
         display: block;
-        margin: 0 auto; } }
+        margin: 0 auto;
+        height: 400px; } }
+    @media screen and (min-width: 992px) {
+      .modal-article__img-container img {
+        max-height: 100%; } }
   .modal-article__list {
     display: flex;
     justify-content: space-around;
@@ -654,7 +659,3 @@ body {
       justify-content: space-between;
       align-items: center;
       width: 80%; } }
-
-.carrousel {
-  height: 500px;
-  border: 1px solid red; }
