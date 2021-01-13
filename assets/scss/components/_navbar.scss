@@ -52,6 +52,7 @@ body {
       grid-template-columns: repeat(var(--navbar-columns), 1fr);
       padding: 0;
       width: auto;
+      background: none;
     }
 
     &__list-item {

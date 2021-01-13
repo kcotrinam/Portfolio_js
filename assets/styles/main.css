@@ -131,6 +131,10 @@ a {
 * {
   color: #fff; }
 
+img {
+  object-fit: cover;
+  width: 100%; }
+
 body {
   font-family: "Poppins", sans-serif; }
 
@@ -270,7 +274,8 @@ body {
       display: grid;
       grid-template-columns: repeat(var(--navbar-columns), 1fr);
       padding: 0;
-      width: auto; }
+      width: auto;
+      background: none; }
     .navbar__list-item {
       margin: 0; }
     .navbar__list-item a {
