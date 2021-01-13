@@ -10,21 +10,9 @@
 .about {
   font-weight: 300;
 
-  @include from(md) {
-    align-self: center;
-  }
-
-  @include from(lg) {
-    padding-right: 6rem;
-  }
-
   &__title {
     @extend %title;
     font-size: 5.5rem;
-
-    @include from(md) {
-      font-size: clamp(2.5rem, 8vw, 6rem);
-    }
   }
 
   &__description {
@@ -39,5 +27,17 @@
     &:hover {
       background: darken($button-bg-color, 10);
     }
+  }
+
+  @include from(md) {
+    align-self: center;
+
+    &__title {
+      font-size: clamp(2.5rem, 8vw, 6rem);
+    }
+  }
+
+  @include from(lg) {
+    padding-right: 6rem;
   }
 }

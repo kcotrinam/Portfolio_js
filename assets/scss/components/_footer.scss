@@ -3,53 +3,53 @@
   margin: 10rem 1rem 0;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
 
-  @include from(md) {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
   &__list {
     margin: auto;
     @extend %social;
     width: 50vw;
     padding: 2rem;
+  }
+}
 
-    @include from(md) {
-      margin: 0;
-      width: auto;
+&__list-item svg {
+  fill: white;
 
-      & * + * {
-        margin-left: 1.4rem;
-      }
-    }
+  &:hover {
+    fill: hsl(0, 67, 57.1);
+  }
+}
+
+&__button a {
+  @extend %button;
+  color: $red;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+
+  & span {
+    margin-left: 1.2rem;
   }
 
-  &__list-item svg {
-    fill: white;
-
-    &:hover {
-      fill: hsl(0, 67, 57.1);
-    }
+  & svg {
+    fill: $red;
   }
 
-  &__button a {
-    @extend %button;
-    color: $red;
-    font-size: 1.5rem;
-    display: flex;
-    align-items: center;
+  &:hover {
+    text-decoration: underline;
+  }
+}
 
-    & span {
-      margin-left: 1.2rem;
-    }
+@include from(md) {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 
-    & svg {
-      fill: $red;
-    }
+  &__list {
+    margin: 0;
+    width: auto;
 
-    &:hover {
-      text-decoration: underline;
+    & * + * {
+      margin-left: 1.4rem;
     }
   }
 }
