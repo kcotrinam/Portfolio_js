@@ -15,17 +15,21 @@ const projects = [
       upper: 'movielife1.png',
       lower: 'movielife2.png'
     }
-  }
-  // {
-  //   name: 'Kika Homemade',
-  //   languages: [
-  //     'Ruby',
-  //     'SCSS',
-  //     'Ruby on Rails'
-  //   ],
-  //   description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga quam rem eligendi, consequuntur modi porro quia a nam, vero corporis distinctio voluptatem id, consequatur deserunt ipsam. Odit tenetur animi fugiat.Ratione molestiae deserunt facere magni animi eius id. Tempora eaque doloribus in. Reiciendis repellendus laboriosam aliquam earum nam ipsum, enim beatae quos quam saepe quidem nobis ut voluptatum, deleniti porro?Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga quam rem eligendi, consequuntur modi porro quia a nam, vero corporis distinctio ',
-  //   image: 'kika-mockup.png'
-  // },
+  },
+  {
+    name: 'Kika Homemade',
+    languages: [
+      'Ruby',
+      'SCSS',
+      'Ruby on Rails'
+    ],
+    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga quam rem eligendi, consequuntur modi porro quia a nam, vero corporis distinctio voluptatem id, consequatur deserunt ipsam. Odit tenetur animi fugiat.Ratione molestiae deserunt facere magni animi eius id. Tempora eaque doloribus in. Reiciendis repellendus laboriosam aliquam earum nam ipsum, enim beatae quos quam saepe quidem nobis ut voluptatum, deleniti porro?Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga quam rem eligendi, consequuntur modi porro quia a nam, vero corporis distinctio ',
+    image: {
+      main: 'kika-mockup.png',
+      upper: 'kika1.png',
+      lower: 'kika2.png'
+    }
+  },
   // {
   //   name: 'Telegram Bot',
   //   languages: [
@@ -34,18 +38,26 @@ const projects = [
   //     'Ruby on Rails'
   //   ],
   //   description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga quam rem eligendi, consequuntur modi porro quia a nam, vero corporis distinctio voluptatem id, consequatur deserunt ipsam. Odit tenetur animi fugiat.Ratione molestiae deserunt facere magni animi eius id. Tempora eaque doloribus in. Reiciendis repellendus laboriosam aliquam earum nam ipsum, enim beatae quos quam saepe quidem nobis ut voluptatum, deleniti porro?Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga quam rem eligendi, consequuntur modi porro quia a nam, vero corporis distinctio',
-  //   image: 'bot-mockup.png'
-  // },
-  // {
-  //   name: 'Movie Life',
-  //   languages: [
-  //     'Ruby',
-  //     'SCSS',
-  //     'Ruby on Rails'
-  //   ],
-  //   description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga quam rem eligendi, consequuntur modi porro quia a nam, vero corporis distinctio voluptatem id, consequatur deserunt ipsam. Odit tenetur animi fugiat.Ratione molestiae deserunt facere magni animi eius id. Tempora eaque doloribus in. Reiciendis repellendus laboriosam aliquam earum nam ipsum, enim beatae quos quam saepe quidem nobis ut voluptatum, deleniti porro?Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga quam rem eligendi, consequuntur modi porro quia a nam, vero corporis distinctio ',
-  //   image: 'movielife-mockup.jpg'
-  // },
+  //   image: {
+  //     main: 'bot-mockup.png',
+  //     upper: 'kika1.png',
+  //     lower: 'kika2.png'
+  //   }
+  // }
+  {
+    name: 'Movie Life',
+    languages: [
+      'Ruby',
+      'SCSS',
+      'Ruby on Rails'
+    ],
+    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga quam rem eligendi, consequuntur modi porro quia a nam, vero corporis distinctio voluptatem id, consequatur deserunt ipsam. Odit tenetur animi fugiat.Ratione molestiae deserunt facere magni animi eius id. Tempora eaque doloribus in. Reiciendis repellendus laboriosam aliquam earum nam ipsum, enim beatae quos quam saepe quidem nobis ut voluptatum, deleniti porro?Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga quam rem eligendi, consequuntur modi porro quia a nam, vero corporis distinctio ',
+    image: {
+      main: 'newsweek-mockup.png',
+      upper: 'newsweek1.png',
+      lower: 'newsweek2.png'
+    }
+  }
   // {
   //   name: 'Movie Life',
   //   languages: [
