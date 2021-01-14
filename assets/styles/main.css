@@ -581,6 +581,20 @@ body {
   #close-modal:hover {
     color: #db4848; }
 
+.modal-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.85);
+  z-index: 100;
+  display: grid;
+  transform: translateX(100vw);
+  grid-template-rows: auto 1fr;
+  padding-bottom: 1.5rem;
+  transition: transform 0.5s; }
+
 #modal-container {
   margin-top: auto;
   margin-bottom: auto;
