@@ -237,6 +237,10 @@ body {
   position: relative;
   overflow-x: hidden; }
 
+.main {
+  max-width: 100vw;
+  overflow-x: hidden; }
+
 .navbar {
   width: 100%;
   display: flex;
@@ -245,15 +249,14 @@ body {
   .navbar__list {
     position: absolute;
     top: 0;
-    right: -100%;
-    width: 100%;
+    left: 0;
+    width: 100vw;
     height: 100%;
     background: rgba(0, 0, 0, 0.7);
     font-size: 1.2rem;
     padding: 3rem 0;
-    transition: right 0.3s linear;
-    display: flex;
-    flex-direction: column; }
+    transform: translateX(-100vw);
+    transition: transform 0.3s linear; }
   .navbar__list * + * {
     margin-top: 0.5rem; }
   .navbar__list-item:hover {
@@ -284,7 +287,7 @@ body {
       width: auto; } }
 
 .show-menu {
-  right: 0; }
+  transform: translateX(0); }
 
 .burger-button {
   width: 25px;
@@ -577,20 +580,6 @@ body {
   cursor: pointer; }
   #close-modal:hover {
     color: #db4848; }
-
-.modal-container {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  background: rgba(0, 0, 0, 0.85);
-  z-index: 100;
-  display: grid;
-  transform: translateX(100vw);
-  grid-template-rows: auto 1fr;
-  padding-bottom: 1.5rem;
-  transition: transform 0.5s; }
 
 #modal-container {
   margin-top: auto;
