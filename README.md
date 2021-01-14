@@ -4,7 +4,7 @@
 
 > This project is built in order to present myself and my experience building web apps.
 
-![screenshot](app/assets/images/mockup.jpg)
+![screenshot](assets/images/mockup.jpg)
 
 ## :red_circle: Live Demo:
 
