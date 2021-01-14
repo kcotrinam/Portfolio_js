@@ -11,13 +11,24 @@
   &__list {
     @extend %social;
     border-top: 2px solid white;
-    display: flex;
-    align-items: center;
+
+    & * + * {
+      margin-left: 1.25rem;
+    }
   }
 
-  &__list-item:hover {
-    transition: transform 0.5s;
-    transform: rotateY(360deg);
+  &__list-item {
+    margin-top: 0;
+  }
+
+  &__list-item svg {
+    fill: #fff;
+    transition: transform 1s;
+  }
+
+  &__list-item svg:hover {
+    transform: rotateY(180deg);
+    fill: $red;
   }
 
   @include from(md) {

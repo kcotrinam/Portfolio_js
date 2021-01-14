@@ -347,12 +347,17 @@ body {
     padding-bottom: 2rem;
     font-weight: 300; }
   .social__list {
-    border-top: 2px solid white;
-    display: flex;
-    align-items: center; }
-  .social__list-item:hover {
-    transition: transform 0.5s;
-    transform: rotateY(360deg); }
+    border-top: 2px solid white; }
+    .social__list * + * {
+      margin-left: 1.25rem; }
+  .social__list-item {
+    margin-top: 0; }
+  .social__list-item svg {
+    fill: #fff;
+    transition: transform 1s; }
+  .social__list-item svg:hover {
+    transform: rotateY(180deg);
+    fill: #db4848; }
   @media screen and (min-width: 768px) {
     .social__title {
       display: none; }
