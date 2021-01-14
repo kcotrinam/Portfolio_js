@@ -303,7 +303,7 @@ body {
   .burger-button .rotate-first {
     transform: rotateZ(45deg) translateX(10px); }
   .burger-button .hide {
-    transform: translateX(100vw); }
+    transform: translateX(-100vw); }
   .burger-button .rotate-second {
     transform: rotateZ(-45deg) translate(9px); }
   @media screen and (min-width: 768px) {
