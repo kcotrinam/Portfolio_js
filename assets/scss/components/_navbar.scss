@@ -58,6 +58,8 @@ body {
       padding: 0;
       width: auto;
       background: none;
+      transform: translateX(0);
+      z-index: 100;
     }
 
     &__list-item {
