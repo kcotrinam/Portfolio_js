@@ -119,12 +119,12 @@ const fillArticleTemplate = (title, lg, img) => {
   // upperImg.style.background = `url(assets/img/${img.upper}) top/cover`;
   // lowerImg.style.background = `url(assets/img/${img.lower}) top/cover`;
   upperImg.style.backgroundImage = `linear-gradient(180deg,
-                                    rgba(0,0,0,0.75) 13%,
+                                    rgba(0,0,0,0.55) 13%,
                                     rgba(5,5,22,0.5746038732394366) 50%,
                                     rgba(0,0,0,1) 100%),
                                     url(assets/img/${img.upper})`;
   lowerImg.style.backgroundImage = `linear-gradient(180deg,
-                                    rgba(0,0,0,0.75) 13%,
+                                    rgba(0,0,0,0.55) 13%,
                                     rgba(5,5,22,0.5746038732394366) 50%,
                                     rgba(0,0,0,0.75) 100%),
                                     url(assets/img/${img.lower}`;

@@ -481,8 +481,7 @@ body {
     color: #7d7c84;
     margin-top: 1.5rem;
     list-style: initial;
-    margin-left: 1.5rem;
-    font-size: 1.5rem; }
+    margin-left: 1.5rem; }
   .card .hash {
     background-color: rgba(34, 176, 124, 0.5); }
   .card .square {
@@ -498,8 +497,10 @@ body {
       margin-top: 0.5rem; }
       .card__title {
         font-size: 1.2rem;
-        margin-top: 1.2rem; } }
-  @media screen and (min-width: 768px) and (min-width: 992px) {
+        margin-top: 1.2rem; }
+      .card__list-item {
+        font-size: clamp(0.95rem, 1.2vw, 1.2rem); } }
+  @media screen and (min-width: 992px) {
     .card__list-item {
       margin-top: 1.2rem; } }
 
