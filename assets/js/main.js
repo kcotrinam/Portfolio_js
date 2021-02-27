@@ -9,11 +9,15 @@ const projects = [
       'SCSS',
       'Ruby on Rails'
     ],
-    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga quam rem eligendi, consequuntur modi porro quia a nam, vero corporis distinctio voluptatem id, consequatur deserunt ipsam. Odit tenetur animi fugiat.Ratione molestiae deserunt facere magni animi eius id. Tempora eaque doloribus in. Reiciendis repellendus laboriosam aliquam earum nam ipsum, enim beatae quos quam saepe quidem nobis ut voluptatum, deleniti porro?Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga quam rem eligendi, consequuntur modi porro quia a nam, vero corporis distinctio ',
+    description: 'This project displays on the main page the most voted article and below it dsiaplys the categories which are currently available. This application allows you to create new users, new categories and new article with their own picture. Every user who is logged-in can vote for their favorite article.',
     image: {
       main: 'movielife-mockup.jpg',
       upper: 'movielife1.png',
       lower: 'movielife2.png'
+    },
+    links: {
+      live: 'http://movielife.herokuapp.com/',
+      source: 'https://github.com/kcotrinam/movieLife'
     },
     carrousel: [
       'movielife-mockup.jpg',
@@ -28,11 +32,15 @@ const projects = [
       'SCSS',
       'CSS'
     ],
-    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga quam rem eligendi, consequuntur modi porro quia a nam, vero corporis distinctio voluptatem id, consequatur deserunt ipsam. Odit tenetur animi fugiat.Ratione molestiae deserunt facere magni animi eius id. Tempora eaque doloribus in. Reiciendis repellendus laboriosam aliquam earum nam ipsum, enim beatae quos quam saepe quidem nobis ut voluptatum, deleniti porro?Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga quam rem eligendi, consequuntur modi porro quia a nam, vero corporis distinctio ',
+    description: "This is the last HTML and CSS project from Microverse program, It's a mock- up of a ZATTIX web designed by Mohammed Awad on Behance, it's built on HTML and CSS3 languages using Sass.",
     image: {
       main: 'kika-mockup.png',
       upper: 'kika1.png',
       lower: 'kika2.png'
+    },
+    links: {
+      live: 'https://kcotrinam.github.io/Kika-store_capstone/',
+      source: 'https://github.com/kcotrinam/Kika-store_capstone'
     },
     carrousel: [
       'kika-mockup.png',
@@ -47,11 +55,15 @@ const projects = [
       'CSS3',
       'Bootstrap'
     ],
-    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga quam rem eligendi, consequuntur modi porro quia a nam, vero corporis distinctio voluptatem id, consequatur deserunt ipsam. Odit tenetur animi fugiat.Ratione molestiae deserunt facere magni animi eius id. Tempora eaque doloribus in. Reiciendis repellendus laboriosam aliquam earum nam ipsum, enim beatae quos quam saepe quidem nobis ut voluptatum, deleniti porro?Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga quam rem eligendi, consequuntur modi porro quia a nam, vero corporis distinctio ',
+    description: 'This project is a clone of the News Week original website. It is all made with bootstrap. For that project my partner and I were able to use different classes of bootstrap in order to get the same structure of the original. It was really challenging and made us learn so much about bootstrap and see its pros and cons.',
     image: {
       main: 'newsweek-mockup.png',
       upper: 'newsweek1.png',
       lower: 'newsweek2.png'
+    },
+    links: {
+      live: 'https://raw.githack.com/janis-jenny/Newsweek-Clone-Page/Newsweek/INDEX.html',
+      source: 'https://github.com/janis-jenny/Newsweek-Clone-Page'
     },
     carrousel: [
       'newsweek-mockup.png',
@@ -66,7 +78,7 @@ burgerBtn.addEventListener('click', () => {
   const menu = document.querySelector('#navbar-list')
   const dashList = [...document.querySelectorAll('#burger-btn span')]
 
-  dashList.map((el,idx) => {
+  dashList.map((el, idx) => {
     switch (idx) {
       case 0:
         el.classList.toggle('rotate-first')
@@ -91,7 +103,7 @@ const setNavbarColumns = () => {
 
 setNavbarColumns()
 
-const displayLetterByLetter = (destination, destination2, message, speed ) => {
+const displayLetterByLetter = (destination, destination2, message, speed) => {
   let i = 0;
   let interval = setInterval(() => {
     if (i < 6) {
@@ -101,13 +113,13 @@ const displayLetterByLetter = (destination, destination2, message, speed ) => {
       document.getElementById(destination2).innerHTML += message.charAt(i);
       i++;
     }
-    if(i > message.length) {
+    if (i > message.length) {
       clearInterval(interval);
     }
   }, speed)
 }
 
-displayLetterByLetter('firstname', 'lastname' ,'Kevin Cotrina', 150)
+displayLetterByLetter('firstname', 'lastname', 'Kevin Cotrina', 150)
 
 const fillArticleTemplate = (title, lg, img) => {
   const copyTemplate = document.importNode(template, true)
@@ -131,13 +143,13 @@ const fillArticleTemplate = (title, lg, img) => {
   templateInfo.style.background = `url(assets/img/${img.main}) center/cover`;
 
   copyTemplate.querySelector('.article__name').textContent = title
-  languages.map( (el, idx)  => {
+  languages.map((el, idx) => {
     el.textContent = lg[idx]
   });
   articlesContainer.appendChild(copyTemplate)
 }
 
-( () => {
+(() => {
   projects.map(project => {
     fillArticleTemplate(project.name, project.languages, project.image)
   })
@@ -156,14 +168,19 @@ const fillModalTemplate = (idx) => {
   const modalImg = copyArticleTemplate.querySelector('.modal-article__img-container img')
   const modalDescription = copyArticleTemplate.querySelector('.modal-article__description')
   const langs = [...copyArticleTemplate.querySelectorAll('.modal-article__list-item')]
-  
+  const [live, source] = [...copyArticleTemplate.querySelectorAll('.modal-article__button')]
+
   modalTitle.textContent = `${projects[idx].name}`
   modalImg.src = `assets/img/${projects[idx].image.main}`
   startCarrousel(modalImg, idx, 2500)
-  modalDescription.textContent = projects[idx].description
+  modalDescription.textContent = projects[idx].description;
+  live.href = projects[idx].links.live
+  source.href = projects[idx].links.source
+  live.target = '_blank'
+  source.target = '_blank'
 
   langs.map((lang, idx) => [
-    lang.textContent = projects[idx].languages[idx] 
+    lang.textContent = projects[idx].languages[idx]
   ])
 
   articleModalContainer.textContent = ''
@@ -191,11 +208,11 @@ showArticleModal()
 
 let n = 1
 const displayCarrousel = (carrouselContainer, idx) => {
-  if(n > 2) {
+  if (n > 2) {
     n = 0
   }
   carrouselContainer.src = `assets/img/${projects[idx].carrousel[n]}`
-    n++
+  n++
 }
 
 const startCarrousel = (container, projectIdx, speed) => {
@@ -203,5 +220,5 @@ const startCarrousel = (container, projectIdx, speed) => {
     displayCarrousel(container, projectIdx)
   }, speed);
 }
- 
+
 // startCarrousel(carr, 0, 1500)
