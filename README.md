@@ -8,7 +8,7 @@
 
 ## :red_circle: Live Demo:
 
-[Live Demo Link](https://kcotrinam.github.io/Portfolio/)
+[Live Demo Link](https://kcotrinam.github.io/Portfolio_js/)
 
 ## :hammer: Built with
 
@@ -23,7 +23,7 @@
 
 To get a local copy up and running follow these simple steps:
 
-1. Go to the [repository page](https://github.com/kcotrinam/Portfolio/).
+1. Go to the [repository page](https://github.com/kcotrinam/Portfolio_js/).
 2. Press the "Code" button and copy the link.
 3. Clone it using git command `git clone <link>`.
 
@@ -39,7 +39,7 @@ To get a local copy up and running follow these simple steps:
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/kcotrinam/Portfolio/issues).
+Feel free to check the [issues page](https://github.com/kcotrinam/Portfolio_js/issues).
 
 ## :muscle: Show your support
 
